@@ -14,6 +14,9 @@
 	<logger name="de.rahn">
 		<level value="info" />
 	</logger>
+	<logger name="de.rahn.aop.Trace">
+		<level value="trace" />
+	</logger>
 
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework">
