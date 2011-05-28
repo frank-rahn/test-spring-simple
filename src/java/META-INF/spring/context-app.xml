@@ -16,4 +16,15 @@
 	<import resource="classpath:/de/rahn/app/application.xml"/>
 	<import resource="classpath:/de/rahn/aop/aop.xml"/>
 
+	<!-- Das Tracen per AOP ermöglichen -->
+	<aop:config>
+		<aop:aspect ref="trace">
+			<aop:pointcut expression="execution(* de.rahn.services.calculator.standard.SimpleCalculator.*(..))" id="pointcut1"/>
+
+			<aop:before method="traceBefore" pointcut-ref="pointcut1"/>
+			<aop:around method="debugAround" pointcut-ref="pointcut1"/>
+			<aop:after-returning method="traceAfter" returning="result" pointcut-ref="pointcut1"/>
+		</aop:aspect>
+	</aop:config>
+
 </beans>
