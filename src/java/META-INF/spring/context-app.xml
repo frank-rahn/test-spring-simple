@@ -12,7 +12,7 @@
 	</description>
 
 	<!-- Die projektspezifischen Konfigurationen laden -->
-	<import resource="classpath:/de/rahn/services/calculator/calculator.xml"/>
-	<import resource="classpath:/de/rahn/app/application.xml"/>
+	<import resource="classpath:/de/rahn/services/calculator/calculator.xml" />
+	<import resource="classpath:/de/rahn/app/application.xml" />
 
 </beans>
