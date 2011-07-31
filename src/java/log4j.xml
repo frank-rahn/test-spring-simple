@@ -18,7 +18,7 @@
 		<level value="trace" />
 	</logger>
 
-	<!-- 3rdparty Loggers -->
+	<!-- 3rd Party Loggers -->
 	<logger name="org.springframework">
 		<level value="info" />
 	</logger>

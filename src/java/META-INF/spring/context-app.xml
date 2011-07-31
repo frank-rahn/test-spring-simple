@@ -14,20 +14,19 @@
 		Dieses ist die zentrale Konfiguration für die Anwendungen.
 	</description>
 
-	<!-- Enabling des AspectJ Support -->
-	<aop:aspectj-autoproxy />
+	<!-- Enabling den AspectJ Support -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
 
 	<!-- Die projektspezifischen Konfigurationen laden -->
 	<import resource="classpath:/de/rahn/services/calculator/calculator.xml" />
 	<import resource="classpath:/de/rahn/app/application.xml" />
 	<import resource="classpath:/de/rahn/aop/aop.xml" />
 
-	<!-- Das Tracen per AOP ermöglichen -->
-	<aop:config>
+	<!-- Das Tracing per AOP ermöglichen -->
+	<aop:config proxy-target-class="true">
 		<aop:aspect ref="trace">
 			<aop:pointcut id="pointcut1"
-				expression="execution(* de.rahn.services.calculator.standard.SimpleCalculator.*(..))"
-			/>
+				expression="execution(* de.rahn.services.calculator.standard.SimpleCalculator.*(..))" />
 
 			<aop:before method="traceBefore" pointcut-ref="pointcut1" />
 			<aop:around method="debugAround" pointcut-ref="pointcut1" />
