@@ -2,12 +2,16 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
 
 	<description>Dieses ist die Konfiguration des Taschenrechners.</description>
 
 	<!-- Den Taschenrechner definieren -->
-	<bean id="simpleCalculator" class="de.rahn.services.calculator.standard.SimpleCalculator" />
+	<bean id="simpleCalculator"
+		class="de.rahn.services.calculator.standard.SimpleCalculator" />
 	<alias name="simpleCalculator" alias="calculator" />
 
 </beans>

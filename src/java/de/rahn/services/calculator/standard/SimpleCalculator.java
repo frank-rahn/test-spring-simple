@@ -1,5 +1,7 @@
 package de.rahn.services.calculator.standard;
 
+import static org.springframework.util.Assert.notNull;
+
 import de.rahn.services.calculator.Calculator;
 
 /**
@@ -10,17 +12,15 @@ public class SimpleCalculator implements Calculator {
 
 	/**
 	 * {@inheritDoc}
-	 * @see de.rahn.services.calculator.Calculator#add(int[])
+	 * @see Calculator#add(int[])
 	 */
 	@Override
-	public int add(int... summand) {
-		if (summand == null) {
-			throw new IllegalArgumentException("Die Summanden sind null");
-		}
+	public int add(int... summands) {
+		notNull(summands, "Die Summanden sind null");
 
 		int result = 0;
 
-		for (int sum : summand) {
+		for (int sum : summands) {
 			result += sum;
 		}
 
@@ -29,17 +29,15 @@ public class SimpleCalculator implements Calculator {
 
 	/**
 	 * {@inheritDoc}
-	 * @see de.rahn.services.calculator.Calculator#add(double[])
+	 * @see Calculator#add(double[])
 	 */
 	@Override
-	public double add(double... summand) {
-		if (summand == null) {
-			throw new IllegalArgumentException("Die Summanden sind null");
-		}
+	public double add(double... summands) {
+		notNull(summands, "Die Summanden sind null");
 
 		double result = 0;
 
-		for (double sum : summand) {
+		for (double sum : summands) {
 			result += sum;
 		}
 

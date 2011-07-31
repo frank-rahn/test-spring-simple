@@ -8,16 +8,16 @@ public interface Calculator {
 
 	/**
 	 * Addiere die rationalen Zahlen.
-	 * @param summand die Summanden
+	 * @param summands die Summanden
 	 * @return die Summe
 	 */
-	double add(double... summand);
+	double add(double... summands);
 
 	/**
 	 * Addiere die natürlichen Zahlen.
-	 * @param summand die Summanden
+	 * @param summands die Summanden
 	 * @return die Summe
 	 */
-	int add(int... summand);
+	int add(int... summands);
 
 }
