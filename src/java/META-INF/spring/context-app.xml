@@ -3,27 +3,36 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:aop="http://www.springframework.org/schema/aop"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+			http://www.springframework.org/schema/aop/spring-aop.xsd
+	">
 
-	<description>Dieses ist die zentrale Konfiguration für die Anwendungen.</description>
+	<description>
+		Dieses ist die zentrale Konfiguration für die Anwendungen.
+	</description>
 
 	<!-- Enabling des AspectJ Support -->
 	<aop:aspectj-autoproxy />
 
 	<!-- Die projektspezifischen Konfigurationen laden -->
-	<import resource="classpath:/de/rahn/services/calculator/calculator.xml"/>
-	<import resource="classpath:/de/rahn/app/application.xml"/>
-	<import resource="classpath:/de/rahn/aop/aop.xml"/>
+	<import resource="classpath:/de/rahn/services/calculator/calculator.xml" />
+	<import resource="classpath:/de/rahn/app/application.xml" />
+	<import resource="classpath:/de/rahn/aop/aop.xml" />
 
 	<!-- Das Tracen per AOP ermöglichen -->
 	<aop:config>
 		<aop:aspect ref="trace">
-			<aop:pointcut expression="execution(* de.rahn.services.calculator.standard.SimpleCalculator.*(..))" id="pointcut1"/>
+			<aop:pointcut id="pointcut1"
+				expression="execution(* de.rahn.services.calculator.standard.SimpleCalculator.*(..))"
+			/>
 
-			<aop:before method="traceBefore" pointcut-ref="pointcut1"/>
-			<aop:around method="debugAround" pointcut-ref="pointcut1"/>
-			<aop:after-returning method="traceAfter" returning="result" pointcut-ref="pointcut1"/>
+			<aop:before method="traceBefore" pointcut-ref="pointcut1" />
+			<aop:around method="debugAround" pointcut-ref="pointcut1" />
+			<aop:after-returning method="traceAfter"
+				returning="result" pointcut-ref="pointcut1" />
 		</aop:aspect>
 	</aop:config>
 
