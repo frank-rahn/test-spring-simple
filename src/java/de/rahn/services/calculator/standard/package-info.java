@@ -4,4 +4,3 @@
  * @see de.rahn.services.calculator.Calculator
  */
 package de.rahn.services.calculator.standard;
-
