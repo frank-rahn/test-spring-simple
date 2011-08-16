@@ -14,7 +14,7 @@
 		Dieses ist die zentrale Konfiguration für die Anwendung.
 	</description>
 
-	<!-- Scanne das Package noch Spring Beans -->
+	<!-- Scanne das Package nach Spring Beans -->
 	<context:component-scan base-package="de.rahn.app" />
 
 </beans>
