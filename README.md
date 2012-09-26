@@ -1,4 +1,4 @@
 test-spring-simple
 ==================
 
-[Spring an einem einfachem Beispiel](http://www.frank-rahn.de/spring-einem-einfachem-beispiel.html "Spring Beispiel bei Frank Rahn").
+[Spring mit AOP](http://www.frank-rahn.de/spring-mit-aop.html "Spring Beispiel bei Frank Rahn").
