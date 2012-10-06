@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>Test Spring Simple</name>
   <description>Test Spring mit einfachen Beispiel</description>
-  <url>https://github.com/frank-rahn/test-spring-simple/tree/develop-spring-mit-aop</url>
+  <url>https://github.com/frank-rahn/test-spring-simple</url>
 
   <organization>
   	<name>Frank W. Rahn</name>
@@ -13,7 +13,7 @@
   </organization>
 
   <scm>
-  	<url>https://github.com/frank-rahn/test-spring-simple/tree/develop-spring-mit-aop</url>
+  	<url>https://github.com/frank-rahn/test-spring-simple</url>
   	<connection>scm:git:git://github.com/frank-rahn/test-spring-simple.git</connection>
   	<developerConnection>scm:git:git@github.com:frank-rahn/test-spring-simple.git</developerConnection>
   </scm>
