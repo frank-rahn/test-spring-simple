@@ -1,6 +1,7 @@
 package de.rahn.services.calculator.standard;
 
-import static org.junit.Assert.assertEquals;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Frank W. Rahn
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("../calculator.xml")
+@ContextConfiguration
 public class SimpleCalculatorTest {
 
 	@Autowired
@@ -24,8 +25,8 @@ public class SimpleCalculatorTest {
 	 */
 	@Test
 	public void testAddDoubleArray() {
-		double result = calculator.add(1.0, 2);
-		assertEquals(3.0, result, 0);
+		double result = calculator.add(1.0, 2.0);
+		assertThat("Test der Addition", result, is(3.0));
 	}
 
 	/**
