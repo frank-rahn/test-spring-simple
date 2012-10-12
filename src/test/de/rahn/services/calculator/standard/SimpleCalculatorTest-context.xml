@@ -7,9 +7,9 @@
 			http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<description>
-		Dieses ist die zentrale Konfiguration für die Tests.
+		Dieses ist die Konfiguration für den Test des Calculators.
 	</description>
 
-	<import resource="classpath:/de/rahn/services/calculator/calculator.xml"/>
+	<import resource="classpath:/de/rahn/services/calculator/calculator.xml" />
 
 </beans>
