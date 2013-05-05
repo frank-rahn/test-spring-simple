@@ -3,7 +3,7 @@
 
   <groupId>test-spring</groupId>
   <artifactId>test-spring-simple</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.1.1-SNAPSHOT</version>
   <name>Test Spring Simple</name>
   <description>Test Spring mit einfachen Beispiel</description>
   <url>https://github.com/frank-rahn/test-spring-simple/tree/develop-spring-mit-aop</url>
@@ -25,6 +25,7 @@
   	<java-version>1.7</java-version>
   	<spring-version>3.1.2.RELEASE</spring-version>
   	<aspectj-version>1.7.0</aspectj-version>
+  	<cglib-version>2.2.2</cglib-version>
   	<slf4j-version>1.7.1</slf4j-version>
   	<hamcrest-version>1.1</hamcrest-version>
   	<junit-version>4.10</junit-version>
@@ -61,7 +62,7 @@
   	<dependency>
   		<groupId>cglib</groupId>
   		<artifactId>cglib</artifactId>
-  		<version>2.2.2</version>
+  		<version>${cglib-version}</version>
   	</dependency>
     <dependency>
     	<groupId>org.slf4j</groupId>
