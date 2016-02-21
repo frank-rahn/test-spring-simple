@@ -18,4 +18,4 @@ Anwendung ausführen: `$ mvn initialize exec:exec`
 
 Continuous Integration
 ----------------------
-[![Build Status](https://travis-ci.org/frank-rahn/test-spring-jpa.svg)](https://travis-ci.org/frank-rahn/test-spring-simple)
+[![Build Status](https://travis-ci.org/frank-rahn/test-spring-simple.svg)](https://travis-ci.org/frank-rahn/test-spring-simple)
